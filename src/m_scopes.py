@@ -5,6 +5,13 @@
 x = 12
 
 def change_x():
+    """
+    Force python to use global scope x
+
+    """
+
+    global x
+
     x = 99
 
 change_x()
@@ -19,6 +26,10 @@ def outer():
     y = 120
 
     def inner():
+        """
+        Force usage of containing scope 
+        value for y
+        """
         y = 999
 
     inner()
